@@ -15,5 +15,6 @@ if you pass multiple arguments, it assume they are more PATHS to update
 
  ## accepted file formats:
  - .mp3
+ - .wav
 
 more to come

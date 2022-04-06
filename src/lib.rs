@@ -1,14 +1,14 @@
 use std::error::Error;  //allows for some better errors
-use std::fs::{self};
-//the library that will allow us to parse files
+use std::fs::{self}; //the library that will allow us to parse files
 use std::path::{Path, PathBuf};    //the library that will allow us to get more info about files and directories      
 use std::ffi::OsString;
 
-use id3::{Tag, TagLike, Version};
+use id3::{Tag, TagLike, Version}; //library that allows us to access and modify the tags of media files
 
 
-const SUPPORTED_EXTENSIONS: [&str; 1] = [
+const SUPPORTED_EXTENSIONS: [&str; 2] = [
     "mp3",
+    "wav"
 ];
 
 pub struct Config {
@@ -140,6 +140,6 @@ pub fn help() {
     
     println!("PATH:\n\tPath to the file (or folder of files) to update\nif you pass multiple arguments, it assume they are more PATHS to update\n");
     
-    println!("ACCEPTED FILE FORMATS:\n\tmp3");
+    println!("ACCEPTED FILE FORMATS:\n\tmp3\n\twav");
     println!();
 }
